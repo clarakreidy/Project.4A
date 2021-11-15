@@ -16,19 +16,19 @@ services:
     networks: 
       - elk
 
-  # logstash:
-  #   image: logstash:7.14.2
-  #   container_name: logstash
-  #   hostname: logstash
-  #   ports:
-  #     - "8089:8089"
-  #     - "9600:9600"
-  #   environment:
-  #     LS_JAVA_OPTS: "-Xmx256m -Xms256m"
-  #   networks:
-  #     - elk
-  #   depends_on:
-  #     - elasticsearch
+#   logstash:
+#     image: logstash:7.14.2
+#     container_name: logstash
+#     hostname: logstash
+#     ports:
+#       - "8089:8089"
+#       - "9600:9600"
+#     environment:
+#       LS_JAVA_OPTS: "-Xmx256m -Xms256m"
+#     networks:
+#       - elk
+#     depends_on:
+#       - elasticsearch
 
   kibana:
     image: kibana:7.14.2
