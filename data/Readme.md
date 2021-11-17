@@ -8,8 +8,8 @@
 | NOM_REG                      | Nom de la région                                  |
 | Dept                         | N° de département                                 |
 | NomDept                      | Nom du département                                |
-| BE21                         | Code bassin d'emploi                              |
-| NOMBE21                      | Nom du bassin d'emploi                            |
+| BE                           | Code bassin d'emploi                              |
+| NOMBE                        | Nom du bassin d'emploi                            |
 | met                          | Nombre de projet de recrutement                   |
 | xmet                         | Nombre de projets de recrutement jugés difficiles |
 | smet                         | Nombre de projets de recrutement saisonniers      | 
