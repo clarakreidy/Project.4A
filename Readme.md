@@ -2,8 +2,8 @@
 
 ## Treat the data
 - [x] Unify the data structure and format
-- [ ] Add timestamps to the sheets
-- [ ] Create a script that cleans the data
+- [x] Add timestamps to the sheets
+- [x] Create a script that cleans the data
 
 ## Getting the infrastructure up and running
 - [x] Set up the elasticsearch container

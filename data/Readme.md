@@ -1,5 +1,6 @@
 | Variables                    | Description                                       |
 | ---------------------------- | ------------------------------------------------- |
+| annee                        | Annee                                             |
 | code métier BMO              | Code métier BMO (FAP)                             |
 | nom_metier BMO               | libellé métier BMO                                |
 | Famille_metier               | Code famille de métier                            |
