@@ -4,7 +4,7 @@ import glob
 import os
 
 # path to the directory where the csv files are
-path = f'{os.getcwd()}/'
+path = f'{os.getcwd()}/data/'
 all_files = glob.glob(path + "*.csv")
 
 li = []

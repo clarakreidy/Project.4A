@@ -9,8 +9,8 @@
 - [x] Set up the elasticsearch container
 - [x] Set up the kibana container
 - [x] Connect kibana and elasticsearch via docker
-- [ ] Set up Logstash container
-- [ ] Create config file for logstash to read the excels
+- [x] Set up Logstash container
+- [x] Create config file for logstash to read the csv
 - [ ] Create a startup script for logstash to read all excels on docker startup
 
 
