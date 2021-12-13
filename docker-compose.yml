@@ -26,6 +26,8 @@ services:
     image: logstash_4a:latest
     container_name: logstash
     hostname: logstash
+    command:
+      - logstash
     ports:
       - '5044:5044'
       - '5000:5000/tcp'
@@ -33,18 +35,22 @@ services:
       - '9600:9600'
     environment:
       - 'LS_JAVA_OPTS=-Xmx256m -Xms256m'
+      - 'ELASTICSEARCH_URL=http://elasticsearch:9200'
     networks:
       - elk
     depends_on:
       - elasticsearch
 
   kibana:
-    image: kibana:7.14.2
+    build: 
+      context: ./kibana/
+    image: kibana_4a:latest
     container_name: kibana
     ports:
       - '5601:5601'
     depends_on:
       - elasticsearch
+      - logstash
     environment:
       - "ELASTICSEARCH_URL=http://elasticsearch:9200"
     networks: 

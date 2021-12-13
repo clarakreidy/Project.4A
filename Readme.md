@@ -11,11 +11,11 @@
 - [x] Connect kibana and elasticsearch via docker
 - [x] Set up Logstash container
 - [x] Create config file for logstash to read the csv
-- [ ] Create a startup script for logstash to read all excels on docker startup
+- [x] Create a startup script for logstash to read all excels on docker startup
 
 
 ## Generating a dashboard
-- [ ] Generate indexes for the data
+- [ ] Generate index patterns for the data
 - [ ] Create a dashboard and add charts to represent the data in kibana
 - [ ] Create a config file that recreates the dashboard
 - [ ] Add dashboard config file to kibana docker and load it on startup
