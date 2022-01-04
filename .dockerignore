@@ -1,4 +1,6 @@
 Readme.md
 run.sh
+docker-compose.yml
 .gitignore
 .git/
+.idea/

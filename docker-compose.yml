@@ -2,7 +2,7 @@ version: '3.7'
 
 services:
   elasticsearch:
-    image: elasticsearch:7.14.2
+    image: elasticsearch:${ELK_VERSION}
     container_name: elasticsearch
     ports:
         - '9200:9200'
@@ -40,6 +40,11 @@ services:
       - elk
     depends_on:
       - elasticsearch
+    healthcheck:
+      test: bin/logstash -t
+      interval: 20s
+      timeout: 5s
+      retries: 5
 
   kibana:
     build: 
