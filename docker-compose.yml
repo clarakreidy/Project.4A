@@ -17,6 +17,11 @@ services:
       memlock:
         soft: -1
         hard: -1
+    healthcheck:
+      test: curl -s https://localhost:9200 >/dev/null; if [[ $$? == 52 ]]; then echo 0; else echo 1; fi
+      interval: 30s
+      timeout: 10s
+      retries: 5
     networks: 
       - elk
 
@@ -47,18 +52,31 @@ services:
       retries: 5
 
   kibana:
-    build: 
-      context: ./kibana/
-    image: kibana_4a:latest
+    image: kibana:${ELK_VERSION}
     container_name: kibana
     ports:
       - '5601:5601'
     depends_on:
       - elasticsearch
-      - logstash
+#      - logstash
     environment:
       - "ELASTICSEARCH_URL=http://elasticsearch:9200"
+    healthcheck:
+      test: curl -s https://localhost:5601 >/dev/null; if [[ $$? == 52 ]]; then echo 0; else echo 1; fi
+      interval: 30s
+      timeout: 10s
+      retries: 5
     networks: 
+      - elk
+
+  wizard:
+    container_name: wizard
+    build: ./wizard
+    depends_on:
+      - elasticsearch
+      - kibana
+#      - logstash
+    networks:
       - elk
 
 networks:
