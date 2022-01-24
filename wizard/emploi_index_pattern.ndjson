@@ -1,0 +1,2 @@
+{"attributes":{"fieldAttrs":"{}","fields":"[]","runtimeFieldMap":"{}","timeFieldName":"date","title":"emploi*","typeMeta":"{}"},"coreMigrationVersion":"7.14.2","id":"emploi-index-pattern-id","migrationVersion":{"index-pattern":"7.11.0"},"references":[],"type":"index-pattern","updated_at":"2022-01-23T11:24:03.983Z","version":"WzMyLDFd"}
+{"excludedObjects":[],"excludedObjectsCount":0,"exportedCount":1,"missingRefCount":0,"missingReferences":[]}
